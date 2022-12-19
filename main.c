@@ -17,7 +17,6 @@ int main()
     int arr[SIZE]; // declare array
     getNumbers(arr);
     insertion_sort(arr, SIZE);
-
     for (int i = 0; i < SIZE; i++) // print sort array
     {
         printf("%d,", arr + i);
