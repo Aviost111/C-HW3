@@ -1,8 +1,7 @@
-//
-// Created by avi on 12/19/22.
-//
-
 #ifndef C_HW3_FUNCTIONS_H
 #define C_HW3_FUNCTIONS_H
 
-#endif //C_HW3_FUNCTIONS_H
+void shift_element(int *arr, int i);
+void insertion_sort(int *arr, int len);
+
+#endif
