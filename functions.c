@@ -21,7 +21,7 @@ void insertion_sort(int *arr, int len)
         for ( j = i-1; j > 0; j--)
         {
             if(value >= *(arr+j)){
-                shift_element(*(arr+j),i-j);
+                shift_element((arr+j),i-j);
                 break;
             }
         }
