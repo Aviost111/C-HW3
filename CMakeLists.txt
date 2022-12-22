@@ -3,4 +3,4 @@ project(C-HW3 C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(untitled main.c functions.c)
+add_executable(untitled main.c functions.c functions_2.c)
