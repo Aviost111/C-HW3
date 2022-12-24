@@ -11,8 +11,8 @@ all: isort findtxt
 isort : $(MAIN_O) isort.o
 	$(CC) $(FLAGS) -o isort $(MAIN_O) isort.o
 
-findtxt : $(MAIN_O) findtxt.o
-	$(CC) $(FLAGS) -o findtxt $(MAIN_O) findtxt.o
+findtxt : findtxt.o
+	$(CC) $(FLAGS) -o findtxt findtxt.o
 
 #Create o files
 

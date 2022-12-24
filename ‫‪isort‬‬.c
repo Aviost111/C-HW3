@@ -17,11 +17,12 @@ void insertion_sort(int *arr, int len)
     int i, index, j, value;
     for (i = 1; i < len; i++)
     {
-        value = *(arr +i);
-        for ( j = i-1; j > 0; j--)
+        value = *(arr + i);
+        for (j = i - 1; j > 0; j--)
         {
-            if(value >= *(arr+j)){
-                shift_element((arr+j),i-j);
+            if (value >= *(arr + j))
+            {
+                shift_element((arr + j), i - j);
                 break;
             }
         }
