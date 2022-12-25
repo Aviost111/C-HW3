@@ -8,7 +8,7 @@ void getNumbers(int *arr)
 {
     for (int i = 0; i < SIZE; i++)
     {
-        scanf("%d", &arr + i);
+        scanf("%d", arr + i);
     }
 }
 
@@ -19,7 +19,7 @@ int main()
     insertion_sort(arr, SIZE);
     for (int i = 0; i < SIZE; i++) // print sort array
     {
-        printf("%d,", arr + i);
+        printf("%d,", *(arr + i));
     }
     return 0;
 }

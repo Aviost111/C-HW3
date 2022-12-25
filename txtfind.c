@@ -3,6 +3,7 @@
 #include <string.h>
 #define LINE 256
 #define WORD 30
+#define TEXT 250 // number of lines in the text <= 250
 
 int getLine(char s[])
 {
@@ -94,7 +95,7 @@ int similar(char *s, char *t, int n)
     int lenS = strlen(s), lenT = strlen(t), counter = 0, indexT = 0;
     for (int i = 0; i < lenS; ++i)
     {
-        if (*(s + i) == *(t + indexT)) //s[i] == t[indexT]
+        if (*(s + i) == *(t + indexT)) // s[i] == t[indexT]
         {
             indexT++;
             if (indexT == lenT)
@@ -115,31 +116,42 @@ int similar(char *s, char *t, int n)
 
 void print_lines(char *str)
 {
-    char *line = NULL;
-
-    
+    char line[LINE] = {0};
+    int lineLen = getLine(line);
+    if (is_substring(line, str))
+    {
+        printf("%.*s\n", lineLen, line); 
+    }
 }
 
 void print_similar_words(char *str)
 {
-
+    char word[WORD] = {0};
+    int worldLen = getWord(word);
+    if(similar(word,str,1)){
+        printf("%.*s\n", worldLen, word);
+    }
 }
 
-int main(){
-    //fgets for the word
+//move main to a different file  
+int main()
+{
+    // fgets for the word
     char word[WORD];
     fgets(word, sizeof(word), stdin);
     //"read" the space
     char space;
-    scanf("%c",&space);
-    //scanf for a or b
+    scanf("%c", &space);
+    // scanf for a or b
     char searchOption;
-    scanf("%c",searchOption);
-    if(searchOption == 'a'){
-    
-    
+    scanf("%c", searchOption);
+    //the second line in the text is empty
+    if (searchOption == 'a')
+    {
+     
+        
     }
-    else if (searchOption == 'b'){
-
+    else if (searchOption == 'b')
+    {
     }
 }
