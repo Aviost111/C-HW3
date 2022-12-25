@@ -15,7 +15,7 @@ int getLine(char s[])
         count++;
         if (s[i] == '\n')
         {
-            s[i + 1] = '\0';
+            s[i+1] = '\0'; //s[i] ?
             break;
         }
     }
@@ -31,7 +31,7 @@ int getWord(char w[])
         count++;
         if ((w[i] == '\n') || (w[i] == '\t') || (w[i] == ' '))
         {
-            w[i + 1] = '\0';
+            w[i+1] = '\0';
             break;
         }
     }
@@ -136,6 +136,8 @@ void print_similar_words(char *str)
 //move main to a different file  
 int main()
 {
+    char w[] = "hello";
+    print_similar_words(w);
     // fgets for the word
     char word[WORD];
     fgets(word, sizeof(word), stdin);
@@ -144,7 +146,7 @@ int main()
     scanf("%c", &space);
     // scanf for a or b
     char searchOption;
-    scanf("%c", searchOption);
+    scanf("%c", &searchOption);
     //the second line in the text is empty
     if (searchOption == 'a')
     {
