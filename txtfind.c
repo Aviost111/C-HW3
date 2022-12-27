@@ -15,7 +15,7 @@ int getLine(char s[])
         count++;
         if (s[i] == '\n')
         {
-            s[i+1] = '\0'; //s[i] ?
+            s[i+1] = '\0';
             break;
         }
     }
@@ -29,7 +29,7 @@ int getWord(char w[])
     {
         w[i] = getchar();
         count++;
-        if ((w[i] == '\n') || (w[i] == '\t') || (w[i] == ' '))
+        if ((w[i] == '\n') || (w[i] == '\t') || (w[i] == ' ') || (w[i] == '\r'))
         {
             w[i+1] = '\0';
             break;
@@ -51,7 +51,7 @@ int substring(char *str1, char *str2)
         {
             for (int j = 1; j < len2; ++j)
             {
-                if (*(str1 + i + j) != *str2 + j)
+                if (*(str1 + i + j) != *(str2 + j))
                 {
                     i = i + j - 1;
                     break;
@@ -61,30 +61,6 @@ int substring(char *str1, char *str2)
                     return 1;
                 }
             }
-        }
-    }
-    return 0;
-}
-
-int is_substring(char *s1, char *s2)
-{
-
-    int len1 = strlen(s1);
-    int len2 = strlen(s2);
-    int j;
-    for (int i = 0; i < len1 - len2; i++)
-    {
-        for (j = 0; j < len2; j++)
-        {
-            if (s1[i + j] != s2[j])
-            {
-                i = i + j - 1;
-                break;
-            }
-        }
-        if (j == len2)
-        {
-            return 1;
         }
     }
     return 0;
@@ -120,7 +96,7 @@ void print_lines(char *str)
     int lineLen = getLine(line);
     if (is_substring(line, str))
     {
-        printf("%.*s\n", lineLen, line); 
+        printf("%s\n", line); 
     }
 }
 
@@ -129,31 +105,6 @@ void print_similar_words(char *str)
     char word[WORD] = {0};
     int worldLen = getWord(word);
     if(similar(word,str,1)){
-        printf("%.*s\n", worldLen, word);
-    }
-}
-
-//move main to a different file  
-int main()
-{
-    char w[] = "hello";
-    print_similar_words(w);
-    // fgets for the word
-    char word[WORD];
-    fgets(word, sizeof(word), stdin);
-    //"read" the space
-    char space;
-    scanf("%c", &space);
-    // scanf for a or b
-    char searchOption;
-    scanf("%c", &searchOption);
-    //the second line in the text is empty
-    if (searchOption == 'a')
-    {
-     
-        
-    }
-    else if (searchOption == 'b')
-    {
+        printf("%s\n", word);
     }
 }

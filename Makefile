@@ -3,6 +3,7 @@ AR =ar
 FLAGS = -Wall -g
 FUN_H = functions.h
 MAIN_O = main.o 
+#MAIN_FIND = 
 
 all: isort txtfind
 
