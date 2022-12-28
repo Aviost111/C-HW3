@@ -12,11 +12,12 @@ void shift_element(int *arr, int i) {
 
 void insertion_sort(int *arr, int len) {
     int i, j, value;
+    printf("hi im here");
     for (i = 1; i < len; i++) {
         value = *(arr + i);
-        for (j = i - 1; j > 0; j--) {
+        for (j = i - 1; j >= 0; j--) {
             if (value >= *(arr + j)) {
-                shift_element((arr + j), i - j);
+                shift_element((arr + j+1), i - j+1);
                 break;
             }
         }
