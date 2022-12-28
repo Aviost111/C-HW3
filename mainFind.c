@@ -1,12 +1,12 @@
 #include "functions.h"
 #include <stdio.h>
 #include <string.h>
+
 #define LINE 256
 #define WORD 30
 #define TEXT 250 // number of lines in the text <= 250
 
-int main()
-{
+int main() {
 
     char word[LINE] = {0};
     getWord(word);
@@ -14,18 +14,13 @@ int main()
     getchar();
     getchar();
 
-    if (searchOption == 'a')
-    {
-        while (!EOF)
-        {
+    if (searchOption == 'a') {
+        while (!EOF) {
             print_lines(word);
         }
 
-    }
-    else if (searchOption == 'b')
-    {
-        while (!EOF)
-        {
+    } else if (searchOption == 'b') {
+        while (!EOF) {
             print_similar_words(word);
         }
     }

@@ -37,5 +37,6 @@ isort.o : isort.c $(FUN_H)
 txtfind.o : txtfind.c $(FUN_H)
 	$(CC) $(FLAGS) -fPIC -c txtfind.c
 
+
 clean:
 	rm -f *.o *.a *.so isort txtfind
