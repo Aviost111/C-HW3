@@ -20,6 +20,10 @@ void insertion_sort(int *arr, int len) {
                 shift_element((arr + j+1), i - j+1);
                 break;
             }
+            if((j==0)&&(value < *(arr + j))){
+                shift_element((arr + j), i);
+                break;
+            }
         }
     }
 }
