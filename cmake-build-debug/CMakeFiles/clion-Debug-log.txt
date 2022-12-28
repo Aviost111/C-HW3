@@ -1,4 +1,1 @@
-/snap/clion/219/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/snap/clion/219/bin/ninja/linux/ninja -G Ninja -S /home/avi/CLionProjects/C-HW3 -B /home/avi/CLionProjects/C-HW3/cmake-build-debug
--- Configuring done
--- Generating done
--- Build files have been written to: /home/avi/CLionProjects/C-HW3/cmake-build-debug
+CMakeLists.txt not found in /home/avi/Documents/GitHub/C-HW3 Select CMakeLists.txt
