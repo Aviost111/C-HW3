@@ -14,7 +14,7 @@ void shift_element(int *arr, int i)
 
 void insertion_sort(int *arr, int len)
 {
-    int i, index, j, value;
+    int i, j, value;
     for (i = 1; i < len; i++)
     {
         value = *(arr + i);

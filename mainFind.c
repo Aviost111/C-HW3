@@ -9,7 +9,7 @@ int main()
 {
 
     char word[LINE] = {0};
-    int lineNum = getWord(word);
+    getWord(word);
     char searchOption = getchar();
     getchar();
     getchar();
@@ -20,7 +20,7 @@ int main()
         {
             print_lines(word);
         }
-        
+
     }
     else if (searchOption == 'b')
     {
@@ -30,3 +30,4 @@ int main()
         }
     }
 }
+

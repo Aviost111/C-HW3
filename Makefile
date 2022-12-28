@@ -2,14 +2,14 @@ CC =gcc
 AR =ar
 FLAGS = -Wall -g
 FUN_H = functions.h
-MAIN_O = main.o 
-MAIN_FIND = mainFind.o 
+MAIN_O = main.o
+MAIN_FIND = mainFind.o
 SORT = isort.o
 FIND = txtfind.o
 
 all: isort txtfind
 
-.PHONY: all clean 
+.PHONY: all clean
 
 isort : $(MAIN_O) isort.so
 	$(CC) $(FLAGS) -o isort $(MAIN_O) ./isort.so
