@@ -6,25 +6,34 @@
 #define WORD 30
 #define TEXT 250 // number of lines in the text <= 250
 
-void getLine(char s[]) {
-    printf("Enter a line character by character :"); // delete this line before submission
+int getLine(char s[]) {
+    int count=0;
     for (int i = 0; i < LINE + 1; ++i) {
-        s[i] = getchar();
+        if((s[i] = getchar())==EOF){
+            return 0;
+        }
+        count++;
         if ((s[i] == '\n') || (s[i] == '\r')) {
-            s[i + 1] = '\0';
+            s[i] = '\0';
             break;
         }
     }
+    return count;
 }
 
-void getWord(char w[]) {
+int getWord(char w[]) {
+    int count;
     for (int i = 0; i < WORD + 1; ++i) {
-        w[i] = getchar();
+        if((w[i] = getchar())==EOF){
+            return 0;
+        }
+        count++;
         if ((w[i] == '\n') || (w[i] == '\t') || (w[i] == ' ') || (w[i] == '\r')) {
-            w[i + 1] = '\0';
+            w[i] = '\0';
             break;
         }
     }
+    return count;
 }
 
 int substring(char *str1, char *str2) {
@@ -67,18 +76,26 @@ int similar(char *s, char *t, int n) {
     return 0;
 }
 
-void print_lines(char *str) {
+int print_lines(char *str) {
     char line[LINE] = {0};
-    getLine(line);
+    int len=getLine(line);
+    if(len==0){
+        return 0;
+    }
     if (substring(line, str)) {
         printf("%s\n", line);
     }
+    return 1;
 }
 
-void print_similar_words(char *str) {
+int print_similar_words(char *str) {
     char word[WORD] = {0};
-    getWord(word);
+    int len=getWord(word);
+    if(len==0){
+        return 0;
+    }
     if (similar(word, str, 1)) {
         printf("%s\n", word);
     }
+    return 1;
 }

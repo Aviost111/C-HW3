@@ -7,21 +7,22 @@
 #define TEXT 250 // number of lines in the text <= 250
 
 int main() {
-
+    int len=1;
     char word[LINE] = {0};
     getWord(word);
+    printf("%s\n",word);
     char searchOption = getchar();
     getchar();
     getchar();
 
     if (searchOption == 'a') {
-        while (!EOF) {
-            print_lines(word);
+        while (len) {
+            len=print_lines(word);
         }
 
     } else if (searchOption == 'b') {
-        while (!EOF) {
-            print_similar_words(word);
+        while (len) {
+            len=print_similar_words(word);
         }
     }
 }
