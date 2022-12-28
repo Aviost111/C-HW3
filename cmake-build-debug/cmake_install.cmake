@@ -1,4 +1,4 @@
-# Install script for directory: /home/avi/CLionProjects/C-HW3
+# Install script for directory: /home/avi/Documents/GitHub/C-HW3
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/avi/CLionProjects/C-HW3/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/avi/Documents/GitHub/C-HW3/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

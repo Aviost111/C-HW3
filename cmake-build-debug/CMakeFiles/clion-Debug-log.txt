@@ -1,1 +1,10 @@
-CMakeLists.txt not found in /home/avi/Documents/GitHub/C-HW3 Select CMakeLists.txt
+/snap/clion/219/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/snap/clion/219/bin/ninja/linux/ninja -G Ninja -S /home/avi/Documents/GitHub/C-HW3 -B /home/avi/Documents/GitHub/C-HW3/cmake-build-debug
+-- The C compiler identification is GNU 11.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/avi/Documents/GitHub/C-HW3/cmake-build-debug
