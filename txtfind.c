@@ -4,11 +4,11 @@
 
 #define LINE 256
 #define WORD 30
-#define TEXT 250 // number of lines in the text <= 250
+//#define TEXT 250 // number of lines in the text <= 250
 
 int getLine(char s[]) {
     int count=0;
-    for (int i = 0; i < LINE + 1; ++i) {
+    for (int i = 0; i < LINE; ++i) {
         if((s[i] = getchar())==EOF){
             return 0;
         }
@@ -22,14 +22,19 @@ int getLine(char s[]) {
 }
 
 int getWord(char w[]) {
-    int count;
-    for (int i = 0; i < WORD + 1; ++i) {
+    int count=0;
+    for (int i = 0; i < WORD; ++i) {
         if((w[i] = getchar())==EOF){
-            return 0;
+            if(count==0){
+                return 0;
+            }else{
+                w[i]=' ';
+            }
         }
         count++;
         if ((w[i] == '\n') || (w[i] == '\t') || (w[i] == ' ') || (w[i] == '\r')) {
             w[i] = '\0';
+            count--;
             break;
         }
     }
