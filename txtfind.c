@@ -4,6 +4,7 @@
 
 #define LINE 256
 #define WORD 30
+static int COUNTER = 0;
 // #define TEXT 250 // number of lines in the text <= 250
 
 int getLine(char s[])
@@ -60,37 +61,35 @@ int substring(char *str1, char *str2)
         return 0;
 }
 
-
-int
-similar (char *s, char *t, int n)
+int similar(char *s, char *t, int n)
 {
-  int lenS = strlen(s), lenT = strlen(t);
-  int counter = 0, indexS=0, indexT = 0;
-  if(lenS == lenT || lenS -n == lenT)
- {
-  for (int i = 0; i < lenS; i++)
+    int lenS = strlen(s), lenT = strlen(t);
+    int counter = 0, indexS = 0, indexT = 0;
+    if (lenS == lenT || lenS - n == lenT)
     {
-      if (s[indexS] == t[indexT])
-	{
-	  indexT ++; 
-	  indexS++;
-	  continue;
-	}
-      if (s[indexS] != t[indexT])
-	{
-	  indexS++;
-	  counter++;
-	}
-      if (counter > n)
-	{
-	  return 0;
-	}
+        for (int i = 0; i < lenS; i++)
+        {
+            if (s[indexS] == t[indexT])
+            {
+                indexT++;
+                indexS++;
+                continue;
+            }
+            if (s[indexS] != t[indexT])
+            {
+                indexS++;
+                counter++;
+            }
+            if (counter > n)
+            {
+                return 0;
+            }
+        }
+        return 1;
     }
-  return 1;
-  }
-  else return 0;
+    else
+        return 0;
 }
-
 
 int print_lines(char *str)
 {
@@ -102,7 +101,15 @@ int print_lines(char *str)
     }
     if (substring(line, str))
     {
-        printf("%s\n", line);
+        if (COUNTER > 0)
+        {
+            printf("\n%s", line);
+        }
+        else if (COUNTER == 0)
+        {
+            printf("%s", line);
+            COUNTER++;
+        }
     }
     return 1;
 }
@@ -117,7 +124,15 @@ int print_similar_words(char *str)
     }
     if (similar(word, str, 1))
     {
-        printf("%s\n", word);
+        if (COUNTER > 0)
+        {
+            printf("\n%s", word);
+        }
+        else if (COUNTER == 0)
+        {
+            printf("%s", word);
+            COUNTER++;
+        }
     }
     return 1;
 }

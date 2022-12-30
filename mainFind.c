@@ -12,8 +12,8 @@ int main()
     char word[LINE] = {0};
     getWord(word);
     char searchOption = getchar();
-    getchar();
-    getchar();
+    getchar(); //space
+    getchar(); //empty line
     if (searchOption == 'a')
     {
         while (len)
