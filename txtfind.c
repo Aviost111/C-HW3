@@ -60,35 +60,37 @@ int substring(char *str1, char *str2)
         return 0;
 }
 
-int similar(char *s, char *t, int n)
+
+int
+similar (char *s, char *t, int n)
 {
-    int lenS = strlen(s), lenT = strlen(t);
-    int counter = 0, indexS = 0, indexT = 0;
-    if (lenS == lenT || lenS - n == lenT)
+  int lenS = strlen(s), lenT = strlen(t);
+  int counter = 0, indexS=0, indexT = 0;
+  if(lenS == lenT || lenS -n == lenT)
+ {
+  for (int i = 0; i < lenS; i++)
     {
-        for (int i = 0; i < lenS; i++)
-        {
-            if (s[indexS] == t[indexT])
-            {
-                indexT++;
-                indexS++;
-                continue;
-            }
-            if (s[indexS] != t[indexT])
-            {
-                indexS++;
-                counter++;
-            }
-            if (counter > n)
-            {
-                return 0;
-            }
-        }
-        return 1;
+      if (s[indexS] == t[indexT])
+	{
+	  indexT ++; 
+	  indexS++;
+	  continue;
+	}
+      if (s[indexS] != t[indexT])
+	{
+	  indexS++;
+	  counter++;
+	}
+      if (counter > n)
+	{
+	  return 0;
+	}
     }
-    else
-        return 0;
+  return 1;
+  }
+  else return 0;
 }
+
 
 int print_lines(char *str)
 {
