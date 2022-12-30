@@ -4,7 +4,6 @@
 
 #define LINE 256
 #define WORD 30
-static int COUNTER = 0;
 // #define TEXT 250 // number of lines in the text <= 250
 
 int getLine(char s[])
@@ -101,15 +100,7 @@ int print_lines(char *str)
     }
     if (substring(line, str))
     {
-        if (COUNTER > 0)
-        {
-            printf("\n%s", line);
-        }
-        else if (COUNTER == 0)
-        {
-            printf("%s", line);
-            COUNTER++;
-        }
+        printf("%s\n", line);
     }
     return 1;
 }
@@ -124,15 +115,7 @@ int print_similar_words(char *str)
     }
     if (similar(word, str, 1))
     {
-        if (COUNTER > 0)
-        {
-            printf("\n%s", word);
-        }
-        else if (COUNTER == 0)
-        {
-            printf("%s", word);
-            COUNTER++;
-        }
+        printf("%s\n", word);
     }
     return 1;
 }
