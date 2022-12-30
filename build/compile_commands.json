@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/home/noa/Documents/GitHub/C-HW3/build",
+  "command": "/usr/bin/gcc   -g -std=gnu11 -o CMakeFiles/C_HW3.dir/isort.c.o -c /home/noa/Documents/GitHub/C-HW3/isort.c",
+  "file": "/home/noa/Documents/GitHub/C-HW3/isort.c"
+},
+{
+  "directory": "/home/noa/Documents/GitHub/C-HW3/build",
+  "command": "/usr/bin/gcc   -g -std=gnu11 -o CMakeFiles/C_HW3.dir/txtfind.c.o -c /home/noa/Documents/GitHub/C-HW3/txtfind.c",
+  "file": "/home/noa/Documents/GitHub/C-HW3/txtfind.c"
+},
+{
+  "directory": "/home/noa/Documents/GitHub/C-HW3/build",
+  "command": "/usr/bin/gcc   -g -std=gnu11 -o CMakeFiles/C_HW3.dir/main.c.o -c /home/noa/Documents/GitHub/C-HW3/main.c",
+  "file": "/home/noa/Documents/GitHub/C-HW3/main.c"
+},
+{
+  "directory": "/home/noa/Documents/GitHub/C-HW3/build",
+  "command": "/usr/bin/gcc   -g -std=gnu11 -o CMakeFiles/C_HW3.dir/mainFind.c.o -c /home/noa/Documents/GitHub/C-HW3/mainFind.c",
+  "file": "/home/noa/Documents/GitHub/C-HW3/mainFind.c"
+}
+]

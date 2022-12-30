@@ -1,0 +1,2 @@
+/usr/bin/ar qc libC_HW3.a CMakeFiles/C_HW3.dir/isort.c.o CMakeFiles/C_HW3.dir/txtfind.c.o CMakeFiles/C_HW3.dir/main.c.o CMakeFiles/C_HW3.dir/mainFind.c.o
+/usr/bin/ranlib libC_HW3.a
