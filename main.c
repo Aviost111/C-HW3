@@ -11,7 +11,7 @@ void getNumbers(int *arr) {
 }
 
 int main() {
-    int arr[SIZE];// declare array
+    int arr[SIZE] = {0}; // declare array
     getNumbers(arr);
     insertion_sort(arr, SIZE);
     for (int i = 0; i < SIZE-1; i++) // print sort array
