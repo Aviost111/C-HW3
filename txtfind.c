@@ -13,7 +13,8 @@ int getLine(char s[])
     {
         if ((s[i] = getchar()) == EOF)
         {
-            return 0;
+            s[i]='\0';
+            return count;
         }
         count++;
         if ((s[i] == '\n') || (s[i] == '\r'))
@@ -32,14 +33,8 @@ int getWord(char w[])
     {
         if ((w[i] = getchar()) == EOF)
         {
-            if (count == 0)
-            {
-                return 0;
-            }
-            else
-            {
-                w[i] = ' ';
-            }
+            w[i]='\0';
+            return count;
         }
         count++;
         if ((w[i] == '\n') || (w[i] == '\t') || (w[i] == ' ') || (w[i] == '\r'))
